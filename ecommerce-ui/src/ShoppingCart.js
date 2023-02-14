@@ -9,7 +9,7 @@ function ShoppingCart({ bnbsInCart, totalCost, removeFromCart }) {
   
     return (
       <div className='shopping-cart'> 
-      <h2>Your trip</h2>
+      <h3>Your trip</h3>
         <div>
           {bnbsInCart.length === 0 && <p>Add a stop to your trip.</p>}
         </div>

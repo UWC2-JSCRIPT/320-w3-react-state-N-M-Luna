@@ -25,7 +25,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>BnB's from Earth</h1>
+      <h1>BnB's in Earth</h1>
+      <h2>Some obnoxious quote about wanderlust.</h2>
       <div className='flexible-box'>
         <div className='listings'>
           <BnbListings bnbList={ bnbs } addToCart={addToCart} />

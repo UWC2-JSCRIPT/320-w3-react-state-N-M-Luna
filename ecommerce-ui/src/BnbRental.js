@@ -11,10 +11,10 @@ function BnbRental({ bnb, removeFromCart }) {
 
     return (
       <div className='bnb-rental'>
-        <button onClick={() => removeFromCart(bnb)}> X </button>
         <p> <b>{title}</b> <br></br>
         {houseType} at {city}, {country} <br></br>
         ${cost} </p>
+        <button onClick={() => removeFromCart(bnb)}> Remove from cart </button>
       </div>
     );
   }
