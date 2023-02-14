@@ -1,5 +1,6 @@
 import React from 'react';
 import BnbCard from './BnbCard.js';
+import PropTypes from 'prop-types';
 
 function BnbListing({ bnbList, addToCart }) { //main
   
@@ -13,5 +14,10 @@ function BnbListing({ bnbList, addToCart }) { //main
     </div>
     );
   }
+
+  BnbListing.propTypes = {
+    bnbList: PropTypes.array.isRequired,
+    addToCart: PropTypes.func.isRequired
+  };
   
   export default BnbListing;

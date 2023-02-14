@@ -1,5 +1,6 @@
 import React from 'react';
 import BnbRental from './BnbRental.js';
+import PropTypes from 'prop-types';
 
 function ShoppingCart({ bnbsInCart, totalCost, removeFromCart }) {
 
@@ -18,5 +19,11 @@ function ShoppingCart({ bnbsInCart, totalCost, removeFromCart }) {
       </div>
     );
   }
+
+  ShoppingCart.propTypes = {
+    bnbsInCart: PropTypes.array.isRequired,
+    totalCost: PropTypes.number.isRequired,
+    removeFromCart: PropTypes.func.isRequired
+  };
   
   export default ShoppingCart;

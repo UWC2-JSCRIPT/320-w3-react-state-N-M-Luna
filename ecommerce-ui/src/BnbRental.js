@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function BnbRental({ bnb, removeFromCart }) {
 
@@ -19,4 +20,9 @@ function BnbRental({ bnb, removeFromCart }) {
     );
   }
   
+  BnbRental.propTypes = {
+    bnb: PropTypes.object.isRequired,
+    removeFromCart: PropTypes.func.isRequired
+  }
+
   export default BnbRental;

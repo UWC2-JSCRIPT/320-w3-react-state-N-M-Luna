@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function BnbCard({ bnb, addToCart }) {
 
@@ -9,15 +10,19 @@ function BnbCard({ bnb, addToCart }) {
   const { name, isSuperhost } = host;
   const { stars, reviews } = rating;
 
-    return (
-      <div className='bnb-card'>
-        <p> <b>{title}</b> </p>
-        <img src={image} alt="property site" />
-        <p> {houseType} at {city}, {country} </p>
-        <p> Price: ${cost} </p>
-        <button onClick={() => addToCart(bnb)}> Add to cart </button>
-      </div>
-    );
-  }
+  return (
+    <div className='bnb-card'>
+      <p> <b>{title}</b> </p>
+      <img src={image} alt="property site" />
+      <p> {houseType} at {city}, {country} <br></br> Price: ${cost} </p>
+      <button onClick={() => addToCart(bnb)}> Add to cart </button>
+    </div>
+  );
+}
+
+BnbCard.propTypes = {
+    bnb: PropTypes.object.isRequired,
+    addToCart: PropTypes.func.isRequired
+  };
   
   export default BnbCard;
