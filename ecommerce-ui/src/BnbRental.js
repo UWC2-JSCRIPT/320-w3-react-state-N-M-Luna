@@ -1,6 +1,6 @@
 import React from 'react';
 
-function BnbCard({ bnb, addToCart }) {
+function BnbRental({ bnb, removeFromCart }) {
 
   //Deconstruct the bnb object from json
   const { title, houseType, image, location, payment, host, rating } = bnb;
@@ -15,9 +15,9 @@ function BnbCard({ bnb, addToCart }) {
         <img src={ image } alt="property site" />
         <p> At { city }, { country } </p>
         <p> Price: { cost } </p>
-        <button onClick={() => addToCart(bnb)}> Add to cart </button>
+        <button onClick={() => removeFromCart(bnb)}> Remove from cart </button>
       </div>
     );
   }
   
-  export default BnbCard;
+  export default BnbRental;

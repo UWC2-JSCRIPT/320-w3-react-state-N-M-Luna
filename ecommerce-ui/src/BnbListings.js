@@ -1,11 +1,11 @@
 import React from 'react';
 import BnbCard from './BnbCard.js';
 
-function BnbListing({ bnbList }) {
+function BnbListing({ bnbList, addToCart }) { //main
   
-    const list = bnbList.map((bnb, i) =>  {
-    return <BnbCard key={i} bnb={bnb} />
-  })
+    const list = bnbList.map((bnb, i) => (
+      <BnbCard key={i} bnb={bnb} addToCart={addToCart} />
+    ))
 
     return (
     <div className='bnb-list'> 

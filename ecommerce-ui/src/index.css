@@ -7,6 +7,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1 {
+  color: green;
+}
+
+.listings, .cart {
+  display: inline-block;
+  width: 50%;
+}
+
 /* BnB listings
 (add flexbox: two columns if shopping cart is hidden, one column if not) 
 .bnb-list {}
