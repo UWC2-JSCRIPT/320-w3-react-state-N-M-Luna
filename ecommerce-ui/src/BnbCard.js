@@ -11,10 +11,10 @@ function BnbCard({ bnb, addToCart }) {
 
     return (
       <div className='bnb-card'>
-        <p> { title } </p>
-        <img src={ image } alt="property site" />
-        <p> At { city }, { country } </p>
-        <p> Price: { cost } </p>
+        <p> <b>{title}</b> </p>
+        <img src={image} alt="property site" />
+        <p> {houseType} at {city}, {country} </p>
+        <p> Price: ${cost} </p>
         <button onClick={() => addToCart(bnb)}> Add to cart </button>
       </div>
     );

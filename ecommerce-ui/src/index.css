@@ -1,27 +1,68 @@
 body {
-  margin: 0;
+  margin: 5%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-align: center;
 }
 
 h1 {
   color: green;
 }
 
-.listings, .cart {
-  display: inline-block;
-  width: 50%;
+/* Layout */
+.flexible-box {
+  display: flex;
+  justify-content: center;
+}
+.listings {
+  flex: 70%;
+}
+.cart {
+  flex: 30%;
+}
+@media screen and (max-width: 600px) {
+  .cart, .listings {
+    width: 100%;
+  }
 }
 
-/* BnB listings
-(add flexbox: two columns if shopping cart is hidden, one column if not) 
-.bnb-list {}
-.bnb-card {}
+/* BnB listings */
+.bnb-card {
+  border: 1px solid gray;
+  border-radius: 5%;
+  padding: 5px;
+  margin-bottom: 15px; 
+  width: 300px;
+}
+.bnb-card img {
+  width: 200px;
+}
+.bnb-card button {
+  background-color: green;
+  border: none;
+  border-radius: 8px;
+  color: white;
+}
+.bnb-card button:hover {
+  background-color: lightgray;
+  color: black;
+}
 
-/* Shopping cart
-
-.shopping-cart {}
-*/
+/* Shopping cart */
+.shopping-cart {
+  background-color: lightgray;
+  border-radius: 15px;
+  padding: 15px;
+}
+.bnb-rental {
+  margin-bottom: 15px; 
+  padding: 5px;
+  text-align: left;
+  width: 300px;
+}
+.bnb-rental button {
+  float: right;
+}

@@ -10,12 +10,11 @@ function BnbRental({ bnb, removeFromCart }) {
   const { stars, reviews } = rating;
 
     return (
-      <div className='bnb-card'>
-        <p> { title } </p>
-        <img src={ image } alt="property site" />
-        <p> At { city }, { country } </p>
-        <p> Price: { cost } </p>
-        <button onClick={() => removeFromCart(bnb)}> Remove from cart </button>
+      <div className='bnb-rental'>
+        <button onClick={() => removeFromCart(bnb)}> X </button>
+        <p> <b>{title}</b> <br></br>
+        {houseType} at {city}, {country} <br></br>
+        ${cost} </p>
       </div>
     );
   }
